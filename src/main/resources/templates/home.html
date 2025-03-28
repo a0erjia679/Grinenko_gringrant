@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<h1>Hello !</h1>
+<p>Welcome to <span th:text="${appName}">Our App</span></p>
+<body>
+<table>
+    <tbody>
+<tr th:each="project: ${projects}">
+<!--    <td  th:text="${index.index + 1}">-->
+<!--    </td>-->
+    <td th:text="${project.id}">1</td>
+    <td th:text="${project.title}">
+
+    </td>
+</tr>
+    </tbody>
+</table>
+
+
+    <h4 class="text-center" th:text="${project.title}"></h4>
+
+</body>
+</html>

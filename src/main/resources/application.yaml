@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gringrant
+    username: postgres
+    password: 1111
+    driverClassName: org.postgresql.Driver
+
+  sql:
+    init:
+      platform: postgres
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" />
+    <h1>
+        <img th:src="@{/images/logo.png}" alt="ГРИНГРАНТ" style =  "width: 100px; height: 100px;"/>
+    </h1>
+    <hr/>
+</head>
+
+<body>
+<div style="text-align: center;">
+    <input type="button" onclick="location.href='/validation/add'" value="Оценить" style="height: 50px; width: 150px; background-color: darkgoldenrod; color: white; font-weight: bold; border-radius: 12px;"/>
+    <br/><br/><br/>
+    <table align="center" style="margin: 0px auto;">
+        <tbody>
+        <tr th:each="validation: ${validations}" style="margin-bottom: 10px; background-color: beige;">
+            <td th:text="${validation.title}" style="background-color: beige; width: 500px; height: 100px; border: burlywood; padding-left: 20px;">
+            <td style="padding-right: 50px;"><a th:href="@{'/validation/edit/' + ${validation.id}}" >Посмотреть</a>
+                <span style="margin-right: 20px;"></span>
+                <input type="button" onclick="location.href='/validation/delete/${validation.id}'" style="height: 50px; width: 100px; background-color: darkgoldenrod; color: white; font-weight: bold; border-radius: 12px;" value="Удалить" /></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" />
+    <h1>
+        <img th:src="@{/images/logo.png}" alt="ГРИНГРАНТ" style =  "width: 100px; height: 100px;"/>
+    </h1>
+    <hr/>
+</head>
+
+<body>
+<form action="#" th:action="@{/validation/add}" th:object="${validation1}" method="post" id="validationForm">
+    <div style="text-align: center;">
+        <h1 style="color: darkgreen;">Валидация</h1> <br/>
+        <input  type="text" th:field="*{title}" style="border: none; text-align: center; width:500px; font-size: larger; font-weight: bolder; color: darkgreen"/>
+        <h2 style="color: darkolivegreen">Проект</h2> <br/>
+        <input type="text" th:field="*{projectTitle}" style="border: none; text-align: center; width:500px; font-size: medium; font-weight: bolder; color: darkolivegreen"/>
+
+        <h4 style="color: forestgreen">Актуальность и социальная значимость проекта</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{sotialSignificanceCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{sotialSignificanceCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Логическая связность и реализуемость проекта, соответствие мероприятий проекта его целям,
+            задачам и ожидаемым результатам</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{logicalCoherenceCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{logicalCoherenceCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Инновационность, уникальность проекта</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{projectUniqnessCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{projectUniqnessCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Соотношение планируемых расходов на реализацию проекта и его ожидаемых результатов,
+            адекватность, измеримость и достижимость таких результатов</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{plannedImplementationCostsCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{plannedImplementationCostsCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Реалистичность бюджета проекта и обоснованность планируемых расходов на реализацию
+            проекта</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{realisticBudgetCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{realisticBudgetCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Масштаб реализации проекта</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{projectImplementationScaleCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{projectImplementationScaleCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Собственный вклад организации и дополнительные ресурсы, привлекаемые на реализацию
+            проекта, перспективы его дальнейшего развития</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{ownContributionCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{ownContributionCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Опыт организации по успешной реализации программ, проектов по соответствующему
+            направлению деятельности</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{organizationExperienceCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{organizationExperienceCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Соответствие опыта и компетенции команды проекта планируемой деятельности</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{matchingExperienceCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{matchingExperienceCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        <h4 style="color: forestgreen">Информационная открытость организации</h4>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{informationOpennesCommentOne}" style="border: none; text-align: center; width:500px; color: darkgrey;"></textarea>
+        <textarea rows="8" cols="120" name="lines" form="validationForm" th:field="*{informationOpennesCommentTwo}" style="border: none; text-align: center; width:500px; color: darkgray;"></textarea>
+
+        </div>
+
+
+    <p style="text-align: center;"><input type="submit" value="Оценить" style="height: 50px; width: 150px; background-color: darkolivegreen; color: white; font-weight: bold; border-radius: 12px;"/> </p>
+
+</form>
+
+</body>
+</html>
